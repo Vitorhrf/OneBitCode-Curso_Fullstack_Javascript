@@ -59,9 +59,10 @@ function handleClick(ev){
         }
 
         linhaVencedora = verificador()
-        
-        if(empate()){
-            linhaVencedora !== null ? destacarVitoria(linhaVencedora) : destacarEmpate() 
+        if (linhaVencedora.length > 0){
+            destacarVitoria(linhaVencedora)
+        } else{
+            empate()
         }
     }
 }
@@ -81,28 +82,38 @@ function verificador(){
     if(board[0][2].innerText !== "" && board[0][2].innerText === board[1][1].innerText && board[1][1].innerText === board[2][0].innerText){
         return [board[0][2], board[1][1], board[2][0]]
     }
-    return false
+    return []
 }
 
 function empate(){
+
+    let quadrantesPreenchidos = true
     for (let i = 0; i < quadrantes.length; i++){
         if(quadrantes[i].innerText === ""){
-            return false
+            quadrantesPreenchidos = false
+            break
         }
     }
-    return true
+    
+    if (quadrantesPreenchidos && linhaVencedora.length === 0) {
+        destacarEmpate()
+        return true
+    }
+    return false
 }
 
 function destacarVitoria(linhaVencedora) {
-    linhaVencedora.forEach(function (element){
-        element.classList.add("vencedor")
-    })
-    quadrantes.forEach(function (element){
-        element.removeEventListener('click', handleClick)
-    })
-    linhaVencedora[0].innerText === '\u03A7' ? turnInput.value = player1 : turnInput.value = player2
-    document.getElementById('turnH1').innerText = "O Vencedor é: "
-    turnInput.classList.add("vencedorInput")
+    if(linhaVencedora.length > 0){
+        linhaVencedora.forEach(function (element){
+            element.classList.add("vencedor")
+        })
+        quadrantes.forEach(function (element){
+            element.removeEventListener('click', handleClick)
+        })
+        linhaVencedora[0].innerText === '\u03A7' ? turnInput.value = player1 : turnInput.value = player2
+        document.getElementById('turnH1').innerText = "O Vencedor é: "
+        turnInput.classList.add("vencedorInput")
+    }    
 }
 
 function destacarEmpate() {
