@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0.5rem;
+}
+
+
+header{
+    font-size: 1.125rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid #030308;
+}
+
+h1, h2{
+    font-family: 'Lora', serif;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section{
+    padding: 2rem;
+    font-size: 1.125rem;
+}
+
+
+img{
+    width: 30%;
+    margin: 2rem;
+}
+
+.inscreva-button{
+    margin: 1rem;
+}
+
+.section-button{
+    display: inline-block;
+}
+
+button{
+    background-color: #43ABF6;
+    color: #fff;
+    border-radius: 2rem;
+    border: 0px;
+    padding: 1rem 1.5rem;
+    margin-left: .5rem;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+
+.black-button{
+    background-color: #030308;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+footer{
+    background-color: #030308;
+    color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    font-family: 'Lora', sans-serif;
+}

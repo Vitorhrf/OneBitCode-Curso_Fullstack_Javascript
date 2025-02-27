@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13 - Jogo da Velha</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body data-theme="dark" id="body">
+    <header>
+        <button id="themeSwitcher">Mudar tema Claro/Escuro</button>
+        <h1 class="title">Tic-tac-toe</h1>
+    </header>
+    <section id="jogadores">
+        <label for="jogador1">Jogador &Chi;: </label>
+        <input type="text" id="jogador1" placeholder="Digite o nome">
+        <label for="jogador2">Jogador &bigcirc;: </label>
+        <input type="text" id="jogador2" placeholder="Digite o nome">
+        <br>
+        <button id="play">Iniciar</button>
+    </section>
+    
+    <div id="turn" class="hidden">
+        <h1 id="turnH1">Jogador da vez: </h1>
+        <input type="text" id="turnInput" readonly>
+        <button id="restart">&#x21BB;</button>
+    </div>
+
+    <main id="game" class="hidden">
+        <div class="quadrante border-top border-left" id="q0"></div>
+        <div class="quadrante border-top" id="q1"></div>
+        <div class="quadrante border-top border-right" id="q2"></div>
+        <div class="quadrante border-left" id="q3"></div>
+        <div class="quadrante" id="q4"></div>
+        <div class="quadrante border-right" id="q5"></div>
+        <div class="quadrante border-left border-bottom" id="q6"></div>
+        <div class="quadrante border-bottom" id="q7"></div>
+        <div class="quadrante border-bottom border-right" id="q8"></div>
+    </main>
+</body>
+</html>
