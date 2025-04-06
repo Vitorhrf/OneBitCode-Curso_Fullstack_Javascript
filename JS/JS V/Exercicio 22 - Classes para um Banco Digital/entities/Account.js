@@ -30,19 +30,19 @@ class Account {
         this.transfers.push(transfer)
     }
 
-    makeDeposit(value, date){
-        this.deposits.push(new Deposit(value, date))
+    makeDeposit(value){
+        this.deposits.push(new Deposit(value))
         this.addBalance(value)
     }
 
-    makeLoan(value, date, installments){
-        this.loans.push(new Loan(value, date, installments))
+    makeLoan(value, installments){
+        this.loans.push(new Loan(value, installments))
         this.addBalance(value)
     }
 
-    makeTransfer(userSend, userReceive, value, date){
+    makeTransfer(userSend, userReceive, value){
         if(userSend instanceof Account && userReceive instanceof Account && userSend !== userReceive){
-            const transfer = new Transfer(userSend, userReceive, value, date)
+            const transfer = new Transfer(userSend, userReceive, value)
             if(userSend.accountOwner === this.accountOwner){
                 this.withdrawBalance(value)
                 this.saveTransfer(transfer)

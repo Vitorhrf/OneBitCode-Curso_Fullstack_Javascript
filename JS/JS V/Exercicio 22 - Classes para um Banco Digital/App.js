@@ -29,17 +29,17 @@ class App {
     }
 
     static deposit(email, value){
-        this.findUser(email).account.makeDeposit(value, new Date())
+        this.findUser(email).account.makeDeposit(value)
     }
 
     static transfer(emailSender, emailReceiver, value){
         const sender = this.findUser(emailSender)
         const receiver = this.findUser(emailReceiver)
-        sender.account.makeTransfer(sender.account, receiver.account, value, new Date())
+        sender.account.makeTransfer(sender.account, receiver.account, value)
     }
 
     static loan(email, value, installments){
-        this.findUser(email).account.makeLoan(value,new Date(), installments)
+        this.findUser(email).account.makeLoan(value, installments)
     }
 
     static changeInterestRate(value){

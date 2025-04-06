@@ -1,9 +1,9 @@
 class Transfer {
-    constructor(userSend, userReceive, value, date) {
+    constructor(userSend, userReceive, value) {
         this.userSend = userSend
         this.userReceive = userReceive
         this.value = value
-        this.date = date                
+        this.date = new Date()                
     }
 }
 

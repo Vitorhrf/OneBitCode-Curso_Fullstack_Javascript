@@ -1,8 +1,8 @@
 class Installment {
-    constructor(value, number, situation) {
+    constructor(value, number) {
         this.value = value
         this.number = number
-        this.situation = situation        
+        this.situation = 'pending'        
     }
 }
 

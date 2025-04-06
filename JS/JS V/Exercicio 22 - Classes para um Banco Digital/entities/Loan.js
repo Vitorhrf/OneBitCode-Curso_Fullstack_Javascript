@@ -2,16 +2,16 @@ import Installment from "./Installment.js"
 
 class Loan {
     static #interestRate = 0.025
-    constructor(value, date, installments) {
+    constructor(value, installments) {
         this.value = value
-        this.date = date
+        this.date = new Date()
         this.installments = []
 
         const totalComJuros = value * (1 + Loan.#interestRate * installments)
         const valueInst = totalComJuros / installments
 
-        for(let i = 0; i < installments; i++){
-            const installment = new Installment(valueInst, i, 'pendente')
+        for(let i = 1; i <= installments; i++){
+            const installment = new Installment(valueInst, i)
             this.installments.push(installment)
         }
     }
