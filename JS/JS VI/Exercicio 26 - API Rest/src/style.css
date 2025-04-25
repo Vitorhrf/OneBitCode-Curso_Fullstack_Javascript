@@ -1,0 +1,195 @@
+
+/* 
+    Estilos globais aplicados a todos os elementos para remover margens e preenchimentos padrão 
+    e definir o box-sizing como border-box para facilitar o controle de tamanhos.
+*/
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* 
+    Estilo para o cabeçalho da página, com fundo escuro, texto branco e centralizado.
+*/
+header {
+     background-color: #333;
+     color: white;
+     padding: 1.5rem 0;
+     text-align: center;
+     font-family: 'Roboto', sans-serif;
+}
+
+/* 
+    Estilo geral para o corpo da página, com fonte padrão e cor de fundo clara.
+*/
+body {
+     font-family: 'Poppins', sans-serif;
+     background-color: #f0f0f0;
+     color: #333;
+}
+
+/* 
+    Estilo para os formulários, com fundo branco, bordas arredondadas e sombra para destaque.
+*/
+form {
+     background-color: #fff;
+     margin: 1rem 1rem 0 1rem;
+     padding: 1.5rem;
+     border-radius: .5rem;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     width: 30vw;
+}
+
+/* 
+    Estilo para os rótulos dos campos de formulário, com espaçamento e tamanho de fonte ajustados.
+*/
+label {
+     display: inline-block;
+     margin-bottom: 1rem;
+     font-size: 1.2rem;
+}
+
+/* 
+    Estilo para os títulos dentro dos formulários, centralizados e com espaçamento inferior.
+*/
+form h2 {
+     margin-bottom: 1.5rem;
+     font-size: 1.5rem;
+     text-align: center;
+}
+
+/* 
+    Estilo para os campos de entrada, com bordas arredondadas e preenchimento interno.
+*/
+input {
+     width: 100%;
+     padding: .5rem;
+     margin-bottom: 1rem;
+     border: 1px solid #ccc;
+     border-radius: .5rem;
+     font-size: 1rem;
+}
+
+/* 
+    Estilo para os botões, com cores padrão, bordas arredondadas e transição para hover.
+*/
+button {
+     width: 100%;
+     padding: .5rem;
+     color: white;
+     border: none;
+     border-radius: .5rem;
+     font-size: 1.2rem;
+     cursor: pointer;
+     background-color: #6c757d;
+     transition: background-color .3s;
+}
+
+/* 
+    Estilo para o botão de adicionar transação ao passar o mouse.
+*/
+#add-transaction-form button:hover {
+     background-color: #218838;
+}
+
+/* 
+    Estilo para o botão de editar transação ao passar o mouse.
+*/
+#edit-transaction-form button:hover {
+     background-color: #007bff;
+}
+
+/* 
+    Estilo para o botão de excluir transação ao passar o mouse.
+*/
+#delete-transaction-form button:hover {
+     background-color: #fd2424;
+}
+
+/* 
+    Estilo para a seção de transações, com fundo branco, bordas arredondadas e sombra.
+*/
+#transactions {
+     margin: 1rem 1rem 0 1rem;
+     padding: 1.5rem;
+     overflow-y: auto;
+     border-radius: .5rem;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     background-color: #fff;
+     width: 70vw;
+}
+
+/* 
+    Estilo para o título da seção de transações, centralizado e com espaçamento inferior.
+*/
+#transactions h2 {
+     margin-bottom: 1.5rem;
+     font-size: 1.5rem;
+     text-align: center;
+}
+
+/* 
+    Estilo para a lista de transações, removendo marcadores e preenchimento padrão.
+*/
+#transactions ul {
+     list-style: none;
+     padding: 0;
+}
+
+/* 
+    Estilo para o layout principal, com elementos dispostos em linha.
+*/
+main {
+     display: flex;
+}
+
+/* 
+    Estilo para os itens da lista de transações, com espaçamento e borda inferior.
+*/
+ul li {
+     display: flex;
+     justify-content: space-between;
+     padding: 1rem 0;
+     border-bottom: 1px solid #ccc;
+}
+
+/* 
+    Estilo para o contêiner do valor total, alinhado à direita.
+*/
+#div-total-value {
+     display: flex;
+     justify-content: flex-end;
+}
+
+/* 
+    Estilo para o valor total, com destaque visual e sombra.
+*/
+#total-value {
+     font-size: 1.3rem;
+     margin: 1rem 0;
+     padding: .5rem;
+     font-family: 'Roboto', sans-serif;
+     font-weight: 700;
+     display: inline-block;
+     width: auto;
+     border-radius: .5rem;
+     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+     background-color: #fff;
+}
+
+/* 
+    Estilo para valores positivos, com cor verde e sombra correspondente.
+*/
+.positive {
+     color: #28a745;
+     box-shadow: 0 2px 10px rgba(43, 255, 0, 0.336) !important;
+}
+
+/* 
+    Estilo para valores negativos, com cor vermelha e sombra correspondente.
+*/
+.negative {
+     color: #dc3545;
+     box-shadow: 0 2px 10px rgba(255, 1, 1, 0.479) !important;
+}

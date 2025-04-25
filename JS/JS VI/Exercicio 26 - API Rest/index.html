@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanças Pessoais</title>
+    <!-- Link para o arquivo de estilos -->
+    <link rel="stylesheet" href="./src/style.css">
+    <!-- Script principal do projeto, carregado como módulo -->
+    <script src="./src/index.js" type="module" defer></script>
+</head>
+<body>
+    <!-- Cabeçalho principal da página -->
+    <header>
+        <h1>Finanças Pessoais</h1>
+    </header>
+    <main>
+        <!-- Seção para os formulários de transações -->
+        <section id="transactions-forms">
+            <!-- Formulário para adicionar uma nova transação -->
+            <form id="add-transaction-form" method="POST" action="http://localhost:3000/transactions">
+                <h2>Adicionar Transação</h2>
+                <label for="transaction-name">Nome da Transação:</label>
+                <input type="text" id="transaction-name" name="transaction-name" placeholder="Digite o nome da transação" required>
+                <br>
+                <label for="transaction-value">Valor da transação:</label>
+                <input type="number" id="transaction-value" name="transaction-value" placeholder="Digite o valor da transação" required>
+                <br>
+                <button type="submit">Adicionar transação</button>
+            </form>
+        
+            <!-- Formulário para editar uma transação existente -->
+            <form id="edit-transaction-form" method="PUT" action="http://localhost:3000/transactions">
+                <h2>Editar Transação</h2>
+                <label for="edit-transaction-id">ID:</label>
+                <input type="text" id="edit-transaction-id" name="edit-transaction-id" placeholder="Digite o ID da transação" required>
+                <br>
+                <label for="edit-transaction-name">Nome da Transação:</label>
+                <input type="text" id="edit-transaction-name" name="edit-transaction-name" placeholder="Digite o novo nome da transação">
+                <br>
+                <label for="edit-transaction-value">Valor da transação:</label>
+                <input type="number" id="edit-transaction-value" name="edit-transaction-value" placeholder="Digite o novo valor da transação">
+                <br>
+                <button type="submit">Editar transação</button>
+            </form>
+        
+            <!-- Formulário para excluir uma transação -->
+            <form id="delete-transaction-form" method="DELETE" action="http://localhost:3000/transactions">
+                <h2>Excluir Transação</h2>
+                <label for="delete-transaction-id">ID:</label>
+                <input type="text" id="delete-transaction-id" name="delete-transaction-id" placeholder="Digite o ID da transação" required>
+                <br>
+                <button type="submit">Excluir Transação</button>
+            </form>
+        </section>
+
+        <!-- Seção para exibir a lista de transações e o valor total -->
+        <section id="transactions">
+            <h2>Lista de Transações</h2>
+            <!-- Lista dinâmica onde as transações serão renderizadas -->
+            <ul id="transaction-list"></ul>
+            <!-- Div para exibir o valor total das transações -->
+            <div id="div-total-value">
+                <p id="total-value"></p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

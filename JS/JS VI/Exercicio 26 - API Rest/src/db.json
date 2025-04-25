@@ -1,0 +1,29 @@
+{
+  "transactions": [
+    {
+      "id": "c5bd",
+      "name": "Salário",
+      "value": 5000
+    },
+    {
+      "id": "a2f3",
+      "name": "Mercearia",
+      "value": -200
+    },
+    {
+      "id": "d7e8",
+      "name": "Conta de energia",
+      "value": -150
+    },
+    {
+      "id": "f9a1",
+      "name": "Trabalho Freelancer",
+      "value": 1200
+    },
+    {
+      "id": "b4c6",
+      "name": "Mensalidade da Academia",
+      "value": -50
+    }
+  ]
+}
