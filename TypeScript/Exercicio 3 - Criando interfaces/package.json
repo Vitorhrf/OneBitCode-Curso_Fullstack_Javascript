@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "name": "exercicio-3---criando-interfaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

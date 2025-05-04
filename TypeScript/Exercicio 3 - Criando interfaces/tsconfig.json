@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      "target": "ESNEXT",      // Atualize para ES2017 ou superior
+      "outDir": "./public/dist",
+      "rootDir": "./src",
+      "lib": ["es2017", "dom"] // Inclui ES2017 e a API do DOM
+    }
+  }
+  
