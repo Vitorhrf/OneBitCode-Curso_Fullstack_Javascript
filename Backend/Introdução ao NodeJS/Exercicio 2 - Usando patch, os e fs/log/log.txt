@@ -1,0 +1,24 @@
+Sistema operacional: Windows 11 Pro
+Arquitetura do sistema: x64
+Modelo do processador: AMD Ryzen 7 5700X 8-Core Processor             
+Tempo de atividade do sistema: 7.5 horas
+Uso de memória: 26.1%
+
+Sistema operacional: Windows 11 Pro
+Arquitetura do sistema: x64
+Modelo do processador: AMD Ryzen 7 5700X 8-Core Processor             
+Tempo de atividade do sistema: 7.5 horas
+Uso de memória: 26.1%
+
+Sistema operacional: Windows 11 Pro
+Arquitetura do sistema: x64
+Modelo do processador: AMD Ryzen 7 5700X 8-Core Processor             
+Tempo de atividade do sistema: 7.5 horas
+Uso de memória: 26.2%
+
+Sistema operacional: Windows 11 Pro
+Arquitetura do sistema: x64
+Modelo do processador: AMD Ryzen 7 5700X 8-Core Processor             
+Tempo de atividade do sistema: 7.5 horas
+Uso de memória: 26.1%
+
