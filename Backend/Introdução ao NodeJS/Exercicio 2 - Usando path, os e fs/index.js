@@ -1,9 +1,9 @@
 const os = require("node:os")
-const patch = require("node:path")
+const path = require("node:path")
 const fs = require("node:fs")
 
-const dir = patch.resolve(__dirname, "./log")
-const logFile = patch.resolve(dir, "log.txt")
+const dir = path.resolve(__dirname, "./log")
+const logFile = path.resolve(dir, "log.txt")
 if (!fs.existsSync(dir)){
     fs.mkdirSync(dir)
 }
