@@ -1,0 +1,53 @@
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Formulário de Inscrição&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;h1&gt;Formulário de Inscrição&lt;/h1&gt;
+
+    &lt;form&gt;
+
+        &lt;label for="nome"&gt;Nome:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="text" id="nome" name="nome"&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="email" name="email" id="email"&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label for="whatsapp"&gt;WhatsApp:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="tel" name="whatsapp" id="whatsapp"&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label&gt;Área de atuação:&lt;/label&gt;&lt;br&gt;
+        &lt;input type="radio" name="area" id="desenvolvimento" value="desenvolvimento"&gt;
+        &lt;label for="desenvolvimento"&gt;Desenvolvimento&lt;/label&gt;
+
+        &lt;input type="radio" name="area" id="qa" value="qa"&gt;
+        &lt;label for="qa"&gt;Quality Assurance (QA)&lt;/label&gt;
+
+        &lt;input type="radio" name="area" id="ad" value="ad"&gt;
+        &lt;label for="ad"&gt;Análise de Dados&lt;/label&gt;
+
+        &lt;input type="radio" name="area" id="infra" value="infra"&gt;
+        &lt;label for="infra"&gt;Infraestrutura&lt;/label&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;label for="obs"&gt;Observações:&lt;/label&gt;&lt;br&gt;
+        &lt;textarea name="obs" id="obs"&gt;&lt;/textarea&gt;
+        &lt;br&gt;&lt;br&gt;
+
+        &lt;input type="checkbox" name="ofertas" id="ofertas"&gt;
+        &lt;label for="ofertas"&gt;Desejo receber novidades e ofertas por email.&lt;/label&gt;
+        &lt;br&gt;
+
+        &lt;button type="submit" value="enviar"&gt;Enviar&lt;/button&gt;
+
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
