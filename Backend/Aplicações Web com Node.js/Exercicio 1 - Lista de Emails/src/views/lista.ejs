@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de emails cadastrados</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/delete.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Lista de emails cadastrados</h1>
+        <ul>
+            <% emailList.forEach(email => { %>
+                <li>
+                    <span><%= email %></span><button class="delete-button" data-email="<%= email %>">Excluir</button>
+                </li>
+            <% }) %>
+        </ul>
+        <br><br><a href="/">Voltar</a>
+    </div>
+</body>
+</html>
