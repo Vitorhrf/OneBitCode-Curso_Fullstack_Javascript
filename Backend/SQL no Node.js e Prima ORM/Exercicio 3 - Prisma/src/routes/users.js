@@ -25,7 +25,11 @@ router.get("/:id", async (req, res) => {
             id: +req.params.id
         },
         include: {
-            posts: true
+            posts: {
+                include: {
+                    tags: true
+                }
+            }
         }
     })
     res.json(user)
