@@ -1,7 +1,7 @@
 import type { Handler } from "express";
 import { CreateLeadRequestSchema, GetLeadsRequestSchema, UpdateLeadRequestSchema } from "./schemas/LeadsRequestSchema";
 import { HttpError } from "../errors/HttpError";
-import { LeadsRepository, LeadWhereParams } from "../repositories/LeadsController";
+import { LeadsRepository, LeadWhereParams } from "../repositories/LeadsRepository";
 
 export class LeadsController {
     

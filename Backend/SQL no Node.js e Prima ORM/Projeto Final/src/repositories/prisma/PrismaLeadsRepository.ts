@@ -1,5 +1,5 @@
 import { Lead } from "@prisma/client";
-import { CreateLeadAttributes, FindLeadsParams, LeadsRepository, LeadWhereParams } from "../LeadsController";
+import { CreateLeadAttributes, FindLeadsParams, LeadsRepository, LeadWhereParams } from "../LeadsRepository";
 import { prisma } from "../../database";
 
 export class PrismaLeadsRepository implements LeadsRepository{
@@ -11,11 +11,28 @@ export class PrismaLeadsRepository implements LeadsRepository{
                     equals: params.where?.name?.equals,
                     mode: params.where?.name?.mode
                 },
-                status: params.where?.status
+                status: params.where?.status,
+
+                campaigns: params.where?.campaignStatus || params.where?.campaignId 
+                    ? { some: {
+                        status: params.where?.campaignStatus,
+                        campaignId: params.where?.campaignId
+                    }} 
+                    : undefined,
+
+                groups: params.where?.groupId 
+                ? { some: { 
+                        id: params.where?.groupId 
+                    }} 
+                    : undefined
             },
             orderBy: { [params.sortBy ?? "name"]: params.order},
             skip: params.offset,
-            take: params.limit
+            take: params.limit,
+            include: {
+                groups: params.include?.groups,
+                campaigns: params.include?.campaigns
+            }
         })
     }
 
@@ -35,13 +52,26 @@ export class PrismaLeadsRepository implements LeadsRepository{
 
     async count(where: LeadWhereParams): Promise<number> {
         return prisma.lead.count({
-            where: {
+           where: {
                 name: {
                     contains: where?.name?.like,
                     equals: where?.name?.equals,
                     mode: where?.name?.mode
                 },
-                status: where?.status
+                status: where?.status,
+
+                campaigns: where?.campaignStatus || where?.campaignId 
+                    ? { some: {
+                        status: where?.campaignStatus,
+                        campaignId: where?.campaignId
+                    }} 
+                    : undefined,
+
+                groups: where?.groupId 
+                ? { some: { 
+                        id: where?.groupId 
+                    }} 
+                    : undefined
             }
         })
     }
